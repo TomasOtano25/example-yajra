@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Yajra\DataTables\Facades\DataTables;
 
 class HomeController extends Controller
 {
@@ -28,5 +29,11 @@ class HomeController extends Controller
         // $users = User::paginate(10);
         // $users = User::all();
         return view('home', compact('users'));
+    }
+
+    public function getUsers()
+    {
+        return DataTables::of(User::query())->make(true);
+        // return DataTable::of(User::query())->make(true);
     }
 }

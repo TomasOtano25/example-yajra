@@ -86,9 +86,10 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script>
+{{-- <script>
 $(document).ready( function () {
     $('#myTable').DataTable();
 } );
-</script>
+</script> --}}
+@stack('scripts')
 </html>
